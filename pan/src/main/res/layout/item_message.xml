@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/normal_item_bg"
+    android:descendantFocusability="blocksDescendants">
+
+    <TextView
+        android:id="@+id/message_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:text="摄像头正对床铺拍到房客穿睡衣 酒店：安全考虑摄像头正对床铺拍到房客穿睡衣 酒店：安全考虑"
+        android:textColor="@color/normal_black"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/message_time"
+        android:layout_below="@+id/message_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="2016-11-09 15:40"
+        android:textColor="@color/gray"
+        android:textSize="12sp" />
+
+</RelativeLayout>

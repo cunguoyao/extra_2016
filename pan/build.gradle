@@ -1,0 +1,45 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "com.keyun.pan"
+        minSdkVersion 14
+        targetSdkVersion 21
+        versionCode 5
+        versionName "0.5"
+        ndk {
+            // 设置支持的SO库架构
+            abiFilters 'armeabi', 'x86' //,'armeabi-v7a', 'x86_64', 'arm64-v8a'
+        }
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : applicationId,
+                JPUSH_APPKEY : "14443177386e6ef0cebad3be", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+        ]
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'org.xutils:xutils:3.3.34'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.kevin:pulltorefresh:1.0.7'
+    //compile 'com.tencent.bugly:crashreport:latest.release' //其中latest.release指代最新版本号，也可以指定明确的版本号，例如2.1.5
+    //compile 'com.tencent.bugly:nativecrashreport:latest.release' //其中latest.release指代最新版本号，也可以指定明确的版本号，例如2.2.0
+    compile 'com.tencent.bugly:crashreport_upgrade:latest.release'
+    compile 'cn.jiguang:jpush:2.1.9'
+}

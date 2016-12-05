@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_color">
+    <include layout="@layout/common_title"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:background="@color/normal_white">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RadioGroup
+                android:id="@+id/id_radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:padding="5dp" >
+
+                <RadioButton
+                    android:id="@+id/id_tab1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="下载列表"
+                    android:textColor="@drawable/main_merch_viepager_selector" />
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="40dp"
+                    android:background="@color/gray"/>
+                <RadioButton
+                    android:id="@+id/id_tab2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="上传列表"
+                    android:textColor="@drawable/main_merch_viepager_selector" />
+            </RadioGroup>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="3dp">
+                <ImageView
+                    android:id="@+id/id_tab_line1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/main_merch_viepager_checked"/>
+                <ImageView
+                    android:id="@+id/id_tab_line2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:visibility="invisible"
+                    android:src="@drawable/main_merch_viepager_checked"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/id_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0" />
+</LinearLayout>

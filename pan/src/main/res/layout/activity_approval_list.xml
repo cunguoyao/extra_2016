@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_color">
+    <include android:id="@+id/title_layout" layout="@layout/common_title"/>
+    <LinearLayout
+        android:layout_below="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            xmlns:ptr="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            ptr:ptrDrawableTop="@drawable/add_loading"
+            android:divider="@null"/>
+        <RelativeLayout
+            android:id="@+id/empty_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+            <ImageView
+                android:id="@+id/empty_data_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/empty_no_data"/>
+            <TextView
+                android:id="@+id/empty_data_text"
+                android:layout_below="@+id/empty_data_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textColor="@color/normal_orange"
+                android:text="没有请求到数据"/>
+            <Button
+                android:id="@+id/goRequest"
+                android:layout_below="@+id/empty_data_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dip"
+                android:layout_marginRight="50dip"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_white"
+                android:paddingBottom="7dp"
+                android:paddingTop="7dp"
+                android:gravity="center"
+                android:text="点击重新请求"
+                android:textColor="@color/btntextcolor"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

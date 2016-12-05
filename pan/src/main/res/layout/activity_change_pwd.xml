@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.keyun.pan.widget.SoftKeyboardLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_color">
+    <include layout="@layout/common_title"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_button_white_normal"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="10dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/normal_item_normal">
+
+            <TextView
+                android:id="@+id/iv_old_pwd"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right|center_vertical"
+                android:text="原密码"
+                android:textSize="18sp"
+                android:visibility="visible"/>
+            <EditText
+                android:layout_centerVertical="true"
+                android:id="@+id/old_pwd"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/iv_old_pwd"
+                android:inputType="text"
+                android:hint="请输入原密码"
+                android:paddingLeft="5dp"
+                android:background="@color/normal_white"
+                android:singleLine="true"
+                android:textColor="@color/gray" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/normal_item_normal">
+            <TextView
+                android:id="@+id/iv_password"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right|center_vertical"
+                android:text="新密码"
+                android:textSize="18sp"
+                android:visibility="visible"/>
+
+            <EditText
+                android:layout_centerVertical="true"
+                android:id="@+id/new_password"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/iv_password"
+                android:hint="请输入密码"
+                android:paddingLeft="5dp"
+                android:background="@null"
+                android:singleLine="true"
+                android:inputType="textPassword"
+                android:textColor="@color/gray"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+            <TextView
+                android:id="@+id/iv_re_password"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right|center_vertical"
+                android:text="确认密码"
+                android:textSize="18sp"
+                android:visibility="visible"/>
+
+            <EditText
+                android:layout_centerVertical="true"
+                android:id="@+id/re_password"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/iv_re_password"
+                android:hint="请再次输入新密码"
+                android:paddingLeft="5dp"
+                android:background="@null"
+                android:singleLine="true"
+                android:inputType="textPassword"
+                android:textColor="@color/gray"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/submitBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dip"
+            android:layout_marginTop="10dip"
+            android:layout_marginRight="15dip"
+            android:layout_marginBottom="10dip"
+            android:background="@drawable/button_blue_white_stroke"
+            android:paddingBottom="7dp"
+            android:paddingTop="7dp"
+            android:gravity="center"
+            android:text="提交修改"
+            android:textColor="@color/normal_white"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+</com.keyun.pan.widget.SoftKeyboardLinearLayout>

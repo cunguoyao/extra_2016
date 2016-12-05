@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@color/page_color"
+    android:orientation="horizontal">
+    <ImageButton
+        android:id="@+id/imagebtn_rank"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="40dp"
+        android:background="@null"
+        android:src="@drawable/main_list_header_rank"
+        />
+    <ImageButton
+        android:id="@+id/imagebtn_new_folder"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="40dp"
+        android:background="@null"
+        android:src="@drawable/main_list_header_create_folder"
+        />
+    <ImageButton
+        android:id="@+id/imagebtn_search"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="40dp"
+        android:background="@null"
+        android:src="@drawable/main_list_header_search"
+        />
+</LinearLayout>

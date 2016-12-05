@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="FileTransferItemLongClick">
+        <item>删除记录</item>
+    </array>
+</resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <FrameLayout
+        android:background="#00000000"
+        android:id="@+id/fl_inner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:background="@drawable/normal_item_bg"
+            android:orientation="vertical" android:layout_width="match_parent"
+            android:layout_height="70dp">
+            <ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/textMore"
+                android:indeterminateDrawable="@drawable/list_load_more_progress"/>
+            <TextView
+                android:id="@+id/textMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="20dp"
+                android:textSize="18sp"
+                android:text="加载更多"/>
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</merge>

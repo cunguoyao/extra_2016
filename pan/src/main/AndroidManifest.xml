@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.keyun.pan">
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"></uses-permission>
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:name=".app.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity android:name=".SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.LoginActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.GuideActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.RequestSettingActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.MainActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.LocalFileActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.LocalFileFilterActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.SearchFileActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.AboutUsActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.AdviceActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.ApprovalActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.MyInfoActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.ChangePwdActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.FileTransferActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.ApprovalWfActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.ApprovalDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.CaptureActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.ShareToLinkActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.ShareToRepoActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.ShareToRepoFileActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.ShareToUserActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.ShareToMailActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.MyMessageActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.SettingActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tencent.bugly.beta.ui.BetaActivity"
+            android:theme="@android:style/Theme.Translucent" />
+
+        <service android:name=".service.DownloadService" android:enabled="true"/>
+        <service android:name=".service.UploadService" android:enabled="true"/>
+
+        <receiver
+            android:name=".app.JPushReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <category android:name="com.keyun.pan" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

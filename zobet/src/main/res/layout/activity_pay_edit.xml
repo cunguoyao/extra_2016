@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_color">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/actionbar_white_background">
+        <ImageButton
+            android:id="@+id/title_back"
+            android:layout_width="@dimen/title_back_width"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="@drawable/trans_item_no_line_bg"
+            android:src="@drawable/ic_back"/>
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_toRightOf="@+id/title_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@color/title_text_color"
+            android:textSize="@dimen/title_text_size"
+            android:text="登录"/>
+        <Button
+            android:id="@+id/fav_btn"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            android:background="@drawable/trans_item_no_line_bg"
+            android:textColor="@color/title_text_color"
+            android:textSize="@dimen/title_text_size"
+            android:text="确认支付"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+        <com.zokbet.betdd.widget.CircularImage
+            android:id="@+id/merch_avatar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/ic_launcher"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:id="@+id/merch_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/merch_avatar"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/normal_black"
+            android:text="商家名称"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/normal_white"
+        android:layout_marginTop="5dp"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="28dp">
+
+            <TextView
+                android:id="@+id/text_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/normal_black"
+                android:textSize="18sp"
+                android:text="金额"/>
+            <EditText
+                android:layout_centerVertical="true"
+                android:id="@+id/edit_money"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/text_money"
+                android:inputType="number"
+                android:hint="请输入消费金额"
+                android:paddingLeft="15dp"
+                android:background="@color/normal_white"
+                android:singleLine="true"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="28dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/text_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/normal_black"
+                android:textSize="18sp"
+                android:text="密码"/>
+            <EditText
+                android:layout_centerVertical="true"
+                android:id="@+id/edit_password"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/text_password"
+                android:hint="请输入支付密码"
+                android:paddingLeft="15dp"
+                android:background="@null"
+                android:singleLine="true"
+                android:inputType="textPassword"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="28dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/text_note"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/normal_black"
+                android:textSize="18sp"
+                android:text="备注"/>
+            <EditText
+                android:layout_centerVertical="true"
+                android:id="@+id/edit_note"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/text_note"
+                android:hint="20字以内"
+                android:paddingLeft="15dp"
+                android:background="@null"
+                android:singleLine="true"
+                android:inputType="text"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

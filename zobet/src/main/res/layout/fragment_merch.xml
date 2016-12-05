@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_color">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/actionbar_white_background">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RadioGroup
+                android:id="@+id/id_radioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:padding="5dp" >
+
+                <RadioButton
+                    android:id="@+id/id_tab1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="全部商家"
+                    android:textColor="@drawable/main_merch_viepager_selector" />
+
+                <RadioButton
+                    android:id="@+id/id_tab2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="优惠商家"
+                    android:textColor="@drawable/main_merch_viepager_selector" />
+            </RadioGroup>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="5dp">
+                <ImageView
+                    android:id="@+id/id_tab_line1"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="25dp"
+                    android:background="@drawable/main_merch_viepager_checked"/>
+                <ImageView
+                    android:id="@+id/id_tab_line2"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="25dp"
+                    android:visibility="invisible"
+                    android:background="@drawable/main_merch_viepager_checked"/>
+            </LinearLayout>
+        </LinearLayout>
+        <ImageButton
+            android:id="@+id/btn_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_action_search"
+            android:background="@drawable/ic_action_search_bg"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"/>
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/id_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0" />
+</LinearLayout>

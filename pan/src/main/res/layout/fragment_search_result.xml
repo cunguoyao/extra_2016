@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/listView"
+        android:layout_below="@+id/layout_up_and_down"
+        android:layout_above="@+id/empty_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        ptr:ptrDrawableTop="@drawable/add_loading"
+        android:divider="@null"/>
+    <RelativeLayout
+        android:id="@+id/empty_data"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+        <ImageView
+            android:id="@+id/empty_data_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/empty_no_data"/>
+        <TextView
+            android:id="@+id/empty_data_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/gray"
+            android:text="这里是空的哦"/>
+    </RelativeLayout>
+
+</LinearLayout>

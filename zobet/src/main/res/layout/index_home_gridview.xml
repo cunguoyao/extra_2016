@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 这个xml没用了 以后可以删除掉的 -->
+<GridView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/index_home_gridview_my"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/normal_white"
+    android:listSelector="@drawable/normal_item_no_line_bg"
+    android:numColumns="4"
+    android:padding="5dp"
+    android:scrollbars="none" >
+
+</GridView>

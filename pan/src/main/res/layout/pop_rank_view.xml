@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:background="@color/light_trans">
+    <RadioGroup
+        android:id="@+id/rgp_rank"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+        <RadioButton
+            android:id="@+id/rdo_rank_name"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:button="@null"
+            android:gravity="center"
+            android:text="按文件名称排序"
+            android:textSize="14sp"
+            android:textColor="@drawable/rank_text_color_selector"/>
+        <RadioButton
+            android:id="@+id/rdo_rank_time"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:button="@null"
+            android:gravity="center"
+            android:text="按时间倒序排序"
+            android:textSize="14sp"
+            android:textColor="@drawable/rank_text_color_selector"
+            android:checked="true"/>
+    </RadioGroup>
+</LinearLayout>
